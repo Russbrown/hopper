@@ -6,7 +6,7 @@
     font-size: 1.2em;
     text-align: right;
 
-    a {
+    span {
         text-decoration: none;
         border-bottom: 1px solid #35e223;
         cursor: pointer;
@@ -15,4 +15,33 @@
 
 .nav-container {
     display: none;
+    position: relative;
+
+    .nav-toggle__btn {
+        position: absolute;
+        top: 20px;
+        right: 4.5%;
+        color: #fff;
+        font-size: 24px;
+        font-family: $font-bold;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        padding: .3em .37em;
+    }
+}
+
+.menu {
+    background: blue;
+
+    li {
+        padding: 1em;
+        text-align: center;
+        font-size: 92px;
+        font-family: $font-bold;
+    }
+
+    li a {
+        color: #fff;
+        text-decoration: none;
+    }
 }

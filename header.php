@@ -35,14 +35,14 @@
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
-		<nav>
-			<div class="nav-toggle">
-				<a class="nav-toggle__btn">Menu</a>
-			</div>
-			<div class="nav-container">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-			</div>
-		</nav>
+		<div class="nav-toggle">
+			<span class="nav-toggle__btn">Menu</span>
+		</div>
 	</header><!-- #masthead -->
+	<nav class="nav-container">
+		<span class="nav-toggle__btn">X</span>
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+	</nav>
+
 
 	<div id="content" class="site-content">
