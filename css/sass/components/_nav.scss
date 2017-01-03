@@ -1,0 +1,18 @@
+.nav-toggle {
+    width: 10%;
+    float: right;
+    margin-top: 2.85em;
+    margin-right: 4.5%;
+    font-size: 1.2em;
+    text-align: right;
+
+    a {
+        text-decoration: none;
+        border-bottom: 1px solid #35e223;
+        cursor: pointer;
+    }
+}
+
+.nav-container {
+    display: none;
+}

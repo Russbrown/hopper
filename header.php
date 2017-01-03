@@ -25,18 +25,24 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'browny' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">		
+	<header id="masthead" class="site-header cf" role="banner">
+		<div class="site-branding">
 			<?php if ( is_front_page() && is_home() ) : ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><div class="site-logo"></div></a>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			<?php else : ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><div class="site-logo"></div></a>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
+		<nav>
+			<div class="nav-toggle">
+				<a class="nav-toggle__btn">Menu</a>
+			</div>
+			<div class="nav-container">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			</div>
+		</nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
