@@ -1,0 +1,87 @@
+.tile {
+    display: block;
+    width: 33.333%;
+    float: left;
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+
+    .tile__type {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+
+        font-size: 1.65em;
+        border-bottom: 1px solid #35e223;
+    }
+
+    .tile__text {
+        position: absolute;
+        top: 3em;
+        left: 1em;
+        display: none;
+
+        font-family: $font-bold;
+        font-size: 1.65em;
+        line-height: 1.2em;
+
+    }
+        
+    &:hover .tile__text {
+        display: block;
+    }
+
+    .tile__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        background: #fff;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &:hover .tile__overlay {
+        opacity: 0.7;
+    }
+
+    .tile__more {
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+        width: 100%;
+
+        font-size: 1.65em;
+    }
+
+    .tile__more__plus {
+        float: left;
+        display: none;
+        width: 27px;
+        height: 27px;
+        background: #4d3be7;
+        color: #fff;
+        font-size: 1.5em;
+        text-align: center;
+        line-height: 27px;
+    }
+
+    .tile__more__text {
+        float: left;
+        display: none;
+        margin-left: .8em;
+        line-height: 27px;
+        font-size: 0.7em;
+        
+    }
+
+    &:hover .tile__more__plus,
+    &:hover .tile__more__text {
+        display: block;
+    }
+
+}

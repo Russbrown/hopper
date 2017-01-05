@@ -78,6 +78,21 @@ function browny_setup() {
 endif; // browny_setup
 add_action( 'after_setup_theme', 'browny_setup' );
 
+add_action( 'init', 'create_post_type' );
+
+function create_post_type() {
+  register_post_type( 'home-tiles',
+    array(
+      'labels' => array(
+        'name' => __( 'Home-tiles' ),
+        'singular_name' => __( 'Home-tile' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
