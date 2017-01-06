@@ -91,6 +91,17 @@ function create_post_type() {
       'has_archive' => true,
     )
   );
+
+  register_post_type( 'home-about',
+    array(
+      'labels' => array(
+        'name' => __( 'Home-about' ),
+        'singular_name' => __( 'Home-about' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
 }
 
 /**

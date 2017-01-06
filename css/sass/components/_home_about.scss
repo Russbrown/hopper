@@ -1,0 +1,19 @@
+.home-about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 5em 0;
+
+    .about__title {
+        font-size: 4.25em;
+        padding-bottom: 10px;
+        text-align: center;
+
+        span {
+            border-bottom: 3px solid $border;
+        }
+    }
+
+    .about__text {
+        padding: 5em 0;
+    }
+}
