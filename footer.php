@@ -11,7 +11,13 @@
 
 	</div><!-- #content -->
 
-		<footer class="footer" id="contact__form">
+		<footer class="footer">
+
+				<div class="social__links">
+					<a href="#" class="social__link"><i class="fa fa-instagram"></i></a>
+					<a href="#" class="social__link"><i class="fa fa-facebook"></i></a>
+					<a href="#" class="social__link"><i class="fa fa-twitter"></i></a>
+				</div>
 
 		</footer>
 
