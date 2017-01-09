@@ -15,6 +15,17 @@ h5 { font-size: 17px; line-height: 24px; }
 h6 { font-size: 14px; line-height: 21px; }
 .subheader { color: #777; }
 
+.section__title {
+    font-size: 4.25em;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 2em 0;
+
+    span {
+        border-bottom: 3px solid $border;
+    }
+}
+
 p { 
 	margin: 0 0 20px 0; 
 }

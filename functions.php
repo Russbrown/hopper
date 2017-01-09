@@ -102,6 +102,17 @@ function create_post_type() {
       'has_archive' => true,
     )
   );
+
+  register_post_type( 'work-tiles',
+    array(
+      'labels' => array(
+        'name' => __( 'Work-tiles' ),
+        'singular_name' => __( 'Work-tile' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
 }
 
 /**
