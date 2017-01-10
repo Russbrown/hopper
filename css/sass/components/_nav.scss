@@ -19,20 +19,24 @@
 
     .nav-toggle__btn {
         position: absolute;
-        top: 20px;
+        top: 1.5em;
         right: 4.5%;
         color: #fff;
-        font-size: 24px;
+        font-size: 3em;
         font-family: $font-bold;
-        border: 2px solid #fff;
         border-radius: 20px;
         padding: .3em .37em;
+        cursor: pointer;
+    }
+
+    .nav-toggle__btn:hover {
+        color: #ffdd00;
     }
 }
 
 .menu {
-    background: blue;
-    padding: 2em 0;
+    background: $accent-2;
+    padding: 8em 0;
 
     li {
         text-align: center;
@@ -44,5 +48,9 @@
     li a {
         color: #fff;
         text-decoration: none;
+    }
+
+    li a:hover {
+        color: #ffdd00;
     }
 }
