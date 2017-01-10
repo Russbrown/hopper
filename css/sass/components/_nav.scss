@@ -32,12 +32,13 @@
 
 .menu {
     background: blue;
+    padding: 2em 0;
 
     li {
-        padding: 1em;
         text-align: center;
         font-size: 92px;
         font-family: $font-bold;
+        line-height: 1.2em;
     }
 
     li a {
