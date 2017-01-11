@@ -1,0 +1,21 @@
+.post {
+    .entry-title {
+        font-size: 3em;
+        line-height: 1.2em;
+        margin-bottom: 1em;
+        a {
+            text-decoration: none;
+        }
+    }
+    .entry-author-title {
+        font-family: $font-bold;
+        font-size: 1.65em;
+        line-height: 1.2em;
+    }
+    .entry-author-img {
+        width: 30%;
+        img {
+            width: 100%;
+        }
+    }
+}

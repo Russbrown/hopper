@@ -11,13 +11,13 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 
-			<main id="main" class="contact-page" role="main">
+			<main id="main" class="content-page" role="main">
 
-				<h1 class="contact__title"><span>Contact</span></h1>
+				<h1 class="page__title"><span>Contact</span></h1>
 
 				<?php $field = get_fields($post_id); ?>
 
-				<div class="contact__text"><?php echo($field["contact_info"]);?></div>
+				<div class="page__text"><?php echo($field["contact_info"]);?></div>
 
 			</main><!-- #main -->
 	</div><!-- #primary -->
