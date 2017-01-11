@@ -4,5 +4,11 @@
 
     .about__text {
         padding-bottom: 5em;
+        font-size: 1.65em;
+        line-height: 1.2em;
+
+        strong {
+            font-family: $font-bold;
+        }
     }
 }
