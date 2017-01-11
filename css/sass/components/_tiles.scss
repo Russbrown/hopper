@@ -87,6 +87,32 @@
 
 }
 
+img.people-rollover {
+    display: none;
+}
+
+.tile-type--People:hover {
+    img.people-rollover {
+        width: 100%;
+        display: block;
+    }
+    .tile-image,
+    .tile__more,
+    .tile__text,
+    .tile__overlay {
+        display: none;
+    }
+}
+
+.tile-type--Work:hover {
+    .tile__type {
+        display: none;
+    }
+    .tile__text {
+        top: 1em;        
+    }
+}
+
 
 
 /// WORK tiles

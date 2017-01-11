@@ -32,8 +32,9 @@ get_header(); ?>
 			<?php if( $the_query->have_posts() ): ?>
 				<section class="home-tiles cf">
 				<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					<a href="<?php the_field('tile_link'); ?>" class="tile home-tile">
-						<img src="<?php the_field('tile_image'); ?>"/>
+					<a href="<?php the_field('tile_link'); ?>" class="tile home-tile tile-type--<?php the_field('tile_type'); ?>">
+						<img src="<?php the_field('tile_image'); ?>" class="tile-image"/>
+						<img src="<?php the_field('rollover_image'); ?>" class="people-rollover"/>
 						<div class="tile__overlay"></div>
 						<div class="tile__type"><?php the_field('tile_type'); ?></div>
 						<div class="tile__text"><?php the_field('tile_text'); ?></div>
