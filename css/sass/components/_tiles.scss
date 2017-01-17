@@ -15,7 +15,8 @@
         left: 1em;
 
         font-size: 1.65em;
-        border-bottom: 1px solid #35e223;
+        border-bottom: 3px solid #35e223;
+        padding-bottom: 3px;
     }
 
     .tile__text {
@@ -83,6 +84,40 @@
     &:hover .tile__more__plus,
     &:hover .tile__more__text {
         display: block;
+    }
+
+}
+
+.tile-color--Light {
+    .tile__type {
+        color: #fff;
+    }
+}
+
+.tile-color--Light:hover {
+    .tile__type {
+        color: #333;
+    }
+}
+
+.tile-color--Dark {
+    .tile__type {
+        color: #333;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .home-tile {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width:414px) {
+
+    .home-tile {
+        width: 100%;
     }
 
 }
@@ -197,4 +232,20 @@ img.people-rollover {
     &:hover .tile__more__text {
         display: block;
     }
+}
+
+@media screen and (max-width:768px) {
+
+    .work-tile {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width:414px) {
+
+    .work-tile {
+        width: 100%;
+    }
+
 }

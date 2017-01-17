@@ -1,0 +1,33 @@
+.case-study__hero {
+    position: relative;
+    width: 100%;
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
+.case-study__hero-title {
+    position: absolute;
+    top: 9rem;
+    text-align: center;
+    width: 100%;
+}
+
+.case-study__text {
+    padding: 0 6rem 8rem;
+    font-size: 1.65em;
+    line-height: 1.2em;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.case-study__tiles {
+    width: 100%;
+
+    img {
+        width: 50%;
+        float: left;
+        display: block;
+    }
+}
