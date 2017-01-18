@@ -27,23 +27,25 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'browny' ); ?></a>
 
 	<header id="masthead" class="site-header cf" role="banner">
-		<div class="site-branding">
-			<?php if ( is_front_page() && is_home() ) : ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><div class="site-logo"></div></a>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><div class="site-logo"></div></a>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-		<div class="nav-toggle">
-			<span class="nav-toggle__btn">Menu</span>
+		<div class="nav__sticky-wrapper">
+			<div class="site-branding">
+				<?php if ( is_front_page() && is_home() ) : ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><div class="site-logo"></div></a>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php else : ?>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><div class="site-logo"></div></a>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php endif; ?>
+			</div><!-- .site-branding -->
+			<div class="nav-toggle">
+				<span class="nav-toggle__btn"><i class="fa fa-bars"></i></span>
+			</div>
+			<nav class="nav-container">
+				<span class="nav-toggle__btn">X</span>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			</nav>
 		</div>
 	</header><!-- #masthead -->
-	<nav class="nav-container">
-		<span class="nav-toggle__btn">X</span>
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-	</nav>
 
 
 	<div id="content" class="site-content">
