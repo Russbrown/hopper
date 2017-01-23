@@ -33,7 +33,20 @@ get_header(); ?>
 				<section class="home-tiles cf">
 				<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
 					<a href="<?php the_field('tile_link'); ?>" class="tile home-tile tile-type--<?php the_field('tile_type'); ?> tile-color--<?php the_field('text_colour'); ?>">
-						<img src="<?php the_field('tile_image'); ?>" class="tile-image"/>
+						
+						<?php
+						if (get_field('tile_type') == 'People') {
+						?>
+							<img src="<?= get_field('people_image_1')['url']; ?>" class="tile-image-1 people-gif active"/>
+							<img src="<?= get_field('people_image_2')['url']; ?>" class="tile-image-2 people-gif"/>
+							<img src="<?= get_field('people_image_3')['url']; ?>" class="tile-image-3 people-gif"/>
+						<?php
+						} else {
+						?>
+							<img src="<?php the_field('tile_image'); ?>" class="tile-image"/>
+						<?php
+						}
+						?>
 						<img src="<?php the_field('rollover_image'); ?>" class="people-rollover"/>
 						<div class="tile__overlay"></div>
 						<div class="tile__type"><?php the_field('tile_type'); ?></div>

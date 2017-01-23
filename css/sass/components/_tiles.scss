@@ -29,6 +29,13 @@
         font-size: 1.65em;
         line-height: 1.2em;
 
+        p {
+            margin-bottom: 0;
+        }
+
+        strong {
+            color: #4d3be7;
+        }
     }
         
     &:hover .tile__text {
@@ -63,11 +70,8 @@
     .tile__more__plus {
         float: left;
         display: none;
-        width: 27px;
-        height: 27px;
-        background: #4d3be7;
-        color: #fff;
-        font-size: 1.5em;
+        color: #4d3be7;
+        font-size: 2rem;
         text-align: center;
         line-height: 27px;
     }
@@ -75,10 +79,10 @@
     .tile__more__text {
         float: left;
         display: none;
-        margin-left: .8em;
+        margin-left: .8rem;
         line-height: 27px;
-        font-size: 0.7em;
-        
+        font-size: 1.65rem;
+        color: #4d3be7;
     }
 
     &:hover .tile__more__plus,
@@ -126,14 +130,46 @@ img.people-rollover {
     display: none;
 }
 
+.tile-type--People {
+    overflow: hidden;
+
+    .tile__text {
+        display: block;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        transition: top, .5s;
+        height: 30%;
+        background: #19eeff;
+        padding: 2rem;
+    }
+
+    .tile-image-1,
+    .tile-image-2,
+    .tile-image-3 {
+        display: none;
+    }
+
+    .people-gif.active {
+        display: block;
+    }
+}
+
 .tile-type--People:hover {
     img.people-rollover {
         width: 100%;
         display: block;
     }
-    .tile-image,
+    
+    .tile__text {
+        top: 70%;
+    }
+
+    .tile-image-1,
+    .tile-image-2,
+    .tile-image-3,
     .tile__more,
-    .tile__text,
     .tile__overlay {
         display: none;
     }

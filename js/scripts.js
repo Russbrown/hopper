@@ -19,4 +19,18 @@ $( document ).ready(function() {
         $('.nav-container').toggleClass("nav-container--active");
         $('body').toggleClass('modal-open');
     });
+
+    window.setInterval(imageFlicker, 375);
+
+    function imageFlicker() {
+        var current = $('.people-gif.active');
+        if (current.next().hasClass("people-gif")) {
+            current.next().addClass('active');
+            current.removeClass('active');
+        } else {
+            current.removeClass('active');
+            $('.tile-image-1').addClass('active');
+        }
+        
+    }
 });
