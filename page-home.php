@@ -31,15 +31,32 @@ get_header(); ?>
 			?>
 			<?php if( $the_query->have_posts() ): ?>
 				<section class="home-tiles cf">
-				<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-					<a href="<?php the_field('tile_link'); ?>" class="tile home-tile tile-type--<?php the_field('tile_type'); ?> tile-color--<?php the_field('text_colour'); ?>">
-						
+				<?php while( $the_query->have_posts() ) : $the_query->the_post(); 
+					if (get_field('tile_type') == 'People') {
+					?>
+						<div class="tile home-tile tile-type--<?php the_field('tile_type'); ?> tile-color--<?php the_field('text_colour'); ?>">
+					<?php 
+					} else {
+					?>
+						<a href="<?php the_field('tile_link'); ?>" class="tile home-tile tile-type--<?php the_field('tile_type'); ?> tile-color--<?php the_field('text_colour'); ?>">
+					<?php
+					}
+					?>						
 						<?php
 						if (get_field('tile_type') == 'People') {
 						?>
 							<img src="<?= get_field('people_image_1')['url']; ?>" class="tile-image-1 people-gif active"/>
 							<img src="<?= get_field('people_image_2')['url']; ?>" class="tile-image-2 people-gif"/>
 							<img src="<?= get_field('people_image_3')['url']; ?>" class="tile-image-3 people-gif"/>
+
+							<div class="tile__people__popup">
+								<div class="popup__body">
+									<h2 class="popup__header"><?php the_field('tile_text'); ?></h2>
+									<div class="popup__text"><?php the_field('people_pop_up_text'); ?></div>
+								</div>
+								<div class="popup__close">X</div>
+								<img src="<?= get_field('people_image_1')['url']; ?>" alt="<?= get_field('people_image_1')['alt']; ?>"/>
+							</div>
 						<?php
 						} else {
 						?>
@@ -55,14 +72,24 @@ get_header(); ?>
 							<div class="tile__more__plus">+</div>
 							<div class="tile__more__text">More</div>
 						</div>
-					</a>
+					<?php
+					if (get_field('tile_type') == 'People') {
+					?>
+						</div>
+					<?php 
+					} else {
+					?>
+						</a>
+					<?php
+					}
+					?>
 				<?php endwhile; ?>
 				</section>
 			<?php endif; ?>
 			<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
 
 			<div class="stripe--green"></div>
-
+			<a id="About"></a>
 			<!--
 			///
 			/// 
@@ -88,7 +115,7 @@ get_header(); ?>
 			<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
 
 			<div class="stripe--green"></div>
-
+			<a id="Work"></a>
 			<h1 class="section__title"><span>Work</span></h1>
 
 			<!--

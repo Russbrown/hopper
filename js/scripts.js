@@ -30,7 +30,26 @@ $( document ).ready(function() {
         } else {
             current.removeClass('active');
             $('.tile-image-1').addClass('active');
-        }
-        
+        }   
     }
+
+    $('.people-rollover, .people-gif').on("click", function(){
+        $(this).siblings(".tile__people__popup").addClass('active');
+    });
+
+    $('.popup__close').on("click", function(){
+        $(this).closest(".tile__people__popup").removeClass('active');
+    });
+
+    $('.js-anchor').on('click', function(){
+        // close nav
+        $('.nav-container').removeClass("nav-container--active");
+        $('body').removeClass('modal-open');        
+        // slide to target
+        var target = '#' + $(this).text();
+        $(document.body).animate({
+            'scrollTop':   $(target).offset().top
+        }, 1000);
+        return false;
+    });
 });

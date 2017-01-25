@@ -24,7 +24,6 @@
         color: #fff;
         font-size: 3em;
         font-family: $font-bold;
-        border-radius: 20px;
         padding: .3em .37em;
         cursor: pointer;
     }
@@ -47,6 +46,7 @@
     width: 100%;
     display: block;
     overflow-y: scroll;
+    z-index: 2;
 }
 
 .menu {

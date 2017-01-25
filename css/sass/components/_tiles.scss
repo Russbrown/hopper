@@ -154,6 +154,67 @@ img.people-rollover {
     .people-gif.active {
         display: block;
     }
+
+    .tile__people__popup {
+        display: none;
+    }
+}
+
+.tile__people__popup.active {
+    display: block;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    background: #fff;
+    z-index: 3;
+    padding: 2rem;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+
+    .popup__close {
+        position: absolute;
+        top: 2.5rem;
+        right: 2rem;
+        font-size: 3em;
+        font-family: $font-bold;
+        cursor: pointer;
+    }
+
+    .popup__body {
+        float: left;
+        width: 40%;
+    }
+
+    .popup__header {
+        border-bottom: 3px solid #35e223;
+        padding-bottom: 3px;
+        display: inline-block;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        float: right;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tile__people__popup.active { 
+        top: 5%;
+        left: 5%;
+        width: 90%;
+
+        .popup__body {
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+        }     
+    }
 }
 
 .tile-type--People:hover {
