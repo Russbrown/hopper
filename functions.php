@@ -145,6 +145,13 @@ function browny_widgets_init() {
 }
 add_action( 'widgets_init', 'browny_widgets_init' );
 
+add_action( 'admin_init', 'posts_order_wpse_91866' );
+
+function posts_order_wpse_91866() 
+{
+    add_post_type_support( 'post', 'page-attributes' );
+}
+
 /**
  * Enqueue scripts and styles.
  */

@@ -25,7 +25,8 @@ get_header(); ?>
 			<?php 
 			$args = array(
 				'numberposts'	=> -1,
-				'post_type'		=> 'Home-Tiles'
+				'post_type'		=> 'Home-Tiles',
+				'orderby'       => 'menu_order'
 			);
 			$the_query = new WP_Query( $args );
 			?>
@@ -129,7 +130,8 @@ get_header(); ?>
 			<?php 
 			$args = array(
 				'numberposts'	=> -1,
-				'post_type'		=> 'Work-Tiles'
+				'post_type'		=> 'Work-Tiles',
+				'orderby'       => 'menu_order'
 			);
 			$the_query = new WP_Query( $args );
 			?>
