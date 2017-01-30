@@ -16,7 +16,7 @@ get_header(); ?>
 
 				<div class="case-study__hero">
 					<img src="<?= $field['img']['url']?>" alt="<?= $field['img']['alt']?>"/>
-					<h1 class="case-study__hero-title"><?= $field['title']?></h1>
+					<h1 class="case-study__hero-title hero-<?= $field['colour_picker'] ?>"><?= $field['title']?></h1>
 				</div>
 
 				<h1 class="section__title"><span><?= $field['article_title']; ?></span></h1>
