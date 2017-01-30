@@ -23,8 +23,6 @@ get_header(); ?>
 
 				<div class="case-study__text"><?= $field['article']; ?></div>
 
-				<div class="stripe--pink"></div>
-
 				<div class="case-study__tiles cf"> 
 					<?php
 					if( have_rows('tile') ):

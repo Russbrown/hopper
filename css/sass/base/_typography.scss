@@ -1,7 +1,7 @@
 // typography
 
 h1, h2, h3, h4, h5, h6 {
-	color: #181818;
+	color: #3c3c3b;
 	font-family: $font-bold;
 	font-weight: normal; 
 }
@@ -19,7 +19,7 @@ h6 { font-size: 14px; line-height: 21px; }
     font-size: 4.25em;
     padding-bottom: 10px;
     text-align: center;
-    margin: 2em 0;
+    margin: 1em 0;
 
     span {
         border-bottom: 3px solid $accent-3;

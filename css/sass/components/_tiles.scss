@@ -21,7 +21,7 @@
 
     .tile__text {
         position: absolute;
-        top: 3em;
+        top: 2.8em;
         left: 1em;
         display: none;
 
@@ -92,6 +92,73 @@
 
 }
 
+.tile-type--Talk {
+    .tile__text {
+        display: block;
+    }
+    .tile__more,
+    .tile__more__plus,
+    .tile__more__text {
+        display: block;
+    }
+}
+
+.tile-type--Talk:hover {
+    .tile__more__plus,
+    .tile__more__text {
+        color: #333;
+    }
+}
+
+.tile-type--About {
+    .tile__text,
+    .tile__more,
+    .tile__more__plus,
+    .tile__more__text
+     {
+        display: block;
+    }
+
+    .tile__text {
+        top: 1em;
+    }
+
+    .tile__type {
+        display: none;
+    }
+}
+
+.tile-type--About:hover {
+    .people-rollover {
+        display: block;
+    }
+
+    .tile-image,
+    .tile__text,
+    .tile__overlay
+     {
+        display: none;
+    }
+
+    .tile__more,
+    .tile__more__plus,
+    .tile__more__text {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 1040px) and (min-width: 768px) {
+    .home-tile {
+
+        .tile__text,
+        .tile__type {
+            font-size: 1.2rem;  
+            padding-bottom: 0;
+        }
+    }
+}
+
 .tile-color--Light {
     .tile__type {
         color: #fff;
@@ -118,7 +185,7 @@
 
 }
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:600px) {
 
     .home-tile {
         width: 100%;
@@ -142,7 +209,7 @@ img.people-rollover {
         transition: top, .5s;
         height: 30%;
         background: #19eeff;
-        padding: 2rem;
+        padding: 1.5rem 1.8rem;
     }
 
     .tile-image-1,
@@ -185,10 +252,16 @@ img.people-rollover {
         width: 40%;
     }
 
+    .popup__text {
+        font-size: 1.2rem;
+        line-height: 1.2em;
+    } 
+
     .popup__header {
         border-bottom: 3px solid #35e223;
         padding-bottom: 3px;
         display: inline-block;
+        margin-bottom: .75em;
 
         p {
             margin-bottom: 0;
@@ -267,7 +340,7 @@ img.people-rollover {
         font-size: 1.65em;
         line-height: 1.2em;
         background: #fff;
-        padding: .5em;
+        padding: .5em .7em;
         width: 50%;
     }
 
@@ -286,7 +359,7 @@ img.people-rollover {
         width: 100%;
         height: 100%;
 
-        background: #4d3be7;
+        background: #fff;
         opacity: 0;
         pointer-events: none;
     }
@@ -307,11 +380,8 @@ img.people-rollover {
     .tile__more__plus {
         float: left;
         display: none;
-        width: 27px;
-        height: 27px;
-        background: #fff;
-        color: $accent-2;
-        font-size: 1.5em;
+        color: #4d3be7;
+        font-size: 2rem;
         text-align: center;
         line-height: 27px;
     }
@@ -319,10 +389,10 @@ img.people-rollover {
     .tile__more__text {
         float: left;
         display: none;
-        margin-left: .8em;
+        margin-left: .8rem;
         line-height: 27px;
-        font-size: 0.7em;
-        color: #fff;
+        font-size: 1.65rem;
+        color: #4d3be7;
     }
 
     &:hover .tile__more__plus,
@@ -339,7 +409,7 @@ img.people-rollover {
 
 }
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:600px) {
 
     .work-tile {
         width: 100%;

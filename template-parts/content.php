@@ -7,8 +7,6 @@
 
 ?>
 
-<div class="stripe--purple"></div>
-
 <?php $field = get_fields($post_id); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class("content-page"); ?>>
@@ -31,3 +29,5 @@
 	</div><!-- .entry-content -->
 
 </article><!-- #post-## -->
+
+<div class="stripe--purple"></div>

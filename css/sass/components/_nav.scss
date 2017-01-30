@@ -1,11 +1,13 @@
 .nav-toggle {
-    width: 10%;
     float: left;
-    margin-top: 3rem;
-    margin-left: 2rem;
+    padding-top: 3rem;
+    padding-left: 2.7rem;
     font-size: 2.5em;
     text-align: left;
-    color: #35e223;
+    color: #fff;
+    background: #19EEFF;
+    height: 117px;
+    width: 110px;
 
     span {
         text-decoration: none;
@@ -51,7 +53,7 @@
 
 .menu {
     background: $accent-2;
-    padding: 8em 0;
+    padding: 6em 0;
 
     li {
         text-align: center;

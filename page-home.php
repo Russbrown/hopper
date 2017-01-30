@@ -33,19 +33,10 @@ get_header(); ?>
 			<?php if( $the_query->have_posts() ): ?>
 				<section class="home-tiles cf">
 				<?php while( $the_query->have_posts() ) : $the_query->the_post(); 
+					
 					if (get_field('tile_type') == 'People') {
 					?>
 						<div class="tile home-tile tile-type--<?php the_field('tile_type'); ?> tile-color--<?php the_field('text_colour'); ?>">
-					<?php 
-					} else {
-					?>
-						<a href="<?php the_field('tile_link'); ?>" class="tile home-tile tile-type--<?php the_field('tile_type'); ?> tile-color--<?php the_field('text_colour'); ?>">
-					<?php
-					}
-					?>						
-						<?php
-						if (get_field('tile_type') == 'People') {
-						?>
 							<img src="<?= get_field('people_image_1')['url']; ?>" class="tile-image-1 people-gif active"/>
 							<img src="<?= get_field('people_image_2')['url']; ?>" class="tile-image-2 people-gif"/>
 							<img src="<?= get_field('people_image_3')['url']; ?>" class="tile-image-3 people-gif"/>
@@ -58,29 +49,57 @@ get_header(); ?>
 								<div class="popup__close">X</div>
 								<img src="<?= get_field('people_image_1')['url']; ?>" alt="<?= get_field('people_image_1')['alt']; ?>"/>
 							</div>
-						<?php
-						} else {
-						?>
-							<img src="<?php the_field('tile_image'); ?>" class="tile-image"/>
-						<?php
-						}
-						?>
-						<img src="<?php the_field('rollover_image'); ?>" class="people-rollover"/>
-						<div class="tile__overlay"></div>
-						<div class="tile__type"><?php the_field('tile_type'); ?></div>
-						<div class="tile__text"><?php the_field('tile_text'); ?></div>
-						<div class="tile__more">
-							<div class="tile__more__plus">+</div>
-							<div class="tile__more__text">More</div>
-						</div>
-					<?php
-					if (get_field('tile_type') == 'People') {
-					?>
+							<div class="tile__overlay"></div>
+							<div class="tile__type"><?php the_field('tile_type'); ?></div>
+							<div class="tile__text"><?php the_field('tile_text'); ?></div>
+							<div class="tile__more">
+								<div class="tile__more__plus">+</div>
+								<div class="tile__more__text">More</div>
+							</div>
+							<img src="<?php the_field('rollover_image'); ?>" class="people-rollover"/>
 						</div>
 					<?php 
-					} else {
+					} else if (get_field('tile_type') == 'Talk'){
+					$postAnchor = "#post-" . get_field('tile_link_2');
 					?>
+						<a href="<?php echo("blog/" . $postAnchor)?>" class="tile home-tile tile-type--<?php the_field('tile_type'); ?> tile-color--<?php the_field('text_colour'); ?>">						
+							<img src="<?php the_field('tile_image'); ?>" class="tile-image"/>
+							<div class="tile__overlay"></div>
+							<div class="tile__type"><?php the_field('tile_type'); ?></div>
+							<div class="tile__text"><?php the_field('tile_text'); ?></div>
+							<div class="tile__more">
+								<div class="tile__more__plus">+</div>
+								<div class="tile__more__text">More</div>
+							</div>					
 						</a>
+					<?php
+					} else if (get_field('tile_type') == 'Work'){
+					?>
+						<a href="<?php the_field('link_title')?>" class="tile home-tile tile-type--<?php the_field('tile_type'); ?> tile-color--<?php the_field('text_colour'); ?>">						
+							<img src="<?php the_field('tile_image'); ?>" class="tile-image"/>
+							<div class="tile__overlay"></div>
+							<div class="tile__type"><?php the_field('tile_type'); ?></div>
+							<div class="tile__text"><?php the_field('tile_text'); ?></div>
+							<div class="tile__more">
+								<div class="tile__more__plus">+</div>
+								<div class="tile__more__text">More</div>
+							</div>					
+							<img src="<?php the_field('rollover_image'); ?>" class="people-rollover"/>
+						</a>						
+					<?php
+					} else if (get_field('tile_type') == 'About'){
+					?>
+						<a href="<?php the_field('link_title')?>" class="tile home-tile tile-type--<?php the_field('tile_type'); ?> tile-color--<?php the_field('text_colour'); ?>">						
+							<img src="<?php the_field('tile_image'); ?>" class="tile-image"/>
+							<div class="tile__overlay"></div>
+							<div class="tile__type"><?php the_field('tile_type'); ?></div>
+							<div class="tile__text"><?php the_field('tile_text'); ?></div>
+							<div class="tile__more">
+								<div class="tile__more__plus">+</div>
+								<div class="tile__more__text">More</div>
+							</div>					
+							<img src="<?php the_field('rollover_image'); ?>" class="people-rollover"/>
+						</a>					
 					<?php
 					}
 					?>
@@ -147,7 +166,7 @@ get_header(); ?>
 						</div>
 						<div class="tile__more">
 							<div class="tile__more__plus">+</div>
-							<div class="tile__more__text">Learn More</div>
+							<div class="tile__more__text">More</div>
 						</div>
 					</a>
 				<?php endwhile; ?>

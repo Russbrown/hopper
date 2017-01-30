@@ -10,12 +10,13 @@ body {
 	-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
 	-webkit-text-size-adjust: 100%;
     margin: 0 auto;
+    color: #3c3c3b;
 }
 
 // Links
-a, a:visited { color: #333; text-decoration: underline; outline: 0; }
+a, a:visited { color: #3c3c3b; text-decoration: underline; outline: 0; }
 
-a:hover, a:focus { color: #000; }
+a:hover, a:focus { color: #3c3c3b; }
 
 p a, p a:visited { line-height: inherit; }
 

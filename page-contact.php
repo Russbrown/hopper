@@ -13,8 +13,6 @@ get_header(); ?>
 
 			<main id="main" class="content-page" role="main">
 
-				<h1 class="page__title"><span>Contact</span></h1>
-
 				<?php $field = get_fields($post_id); ?>
 
 				<div class="page__text"><?php echo($field["contact_info"]);?></div>
