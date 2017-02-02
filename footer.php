@@ -14,11 +14,12 @@
 		<footer class="footer">
 
 				<div class="social__links">
-					<a href="#" class="social__link"><i class="fa fa-instagram"></i></a>
-					<a href="#" class="social__link"><i class="fa fa-facebook"></i></a>
-					<a href="#" class="social__link"><i class="fa fa-twitter"></i></a>
-					<a href="http://www.creativebrief.com/agency/feed/24329" class="social__link">
-						<img src="img/creativebrief.png" alt="creative brief"/>
+					<a href="https://www.instagram.com/wearehopper/" class="social__link"><i class="fa fa-instagram"></i></a>
+					<a href="https://www.facebook.com/wearehopper" class="social__link"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/We_Are_Hopper" class="social__link"><i class="fa fa-twitter"></i></a>
+					<a href="http://www.creativebrief.com/agency/feed/24329" class="social__link creative-brief">
+						<?php $creativeBrief = get_template_directory_uri(); ?>
+						<img src="<?= $creativeBrief ?>/img/creativebrief.png" alt="creative brief"/>
 					</a>
 				</div>
 

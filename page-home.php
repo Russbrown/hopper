@@ -37,9 +37,12 @@ get_header(); ?>
 					if (get_field('tile_type') == 'People') {
 					?>
 						<div class="tile home-tile tile-type--<?php the_field('tile_type'); ?> tile-color--<?php the_field('text_colour'); ?>">
-							<img src="<?= get_field('people_image_1')['url']; ?>" class="tile-image-1 people-gif active"/>
-							<img src="<?= get_field('people_image_2')['url']; ?>" class="tile-image-2 people-gif"/>
-							<img src="<?= get_field('people_image_3')['url']; ?>" class="tile-image-3 people-gif"/>
+							<?php $image1 = get_field("people_image_1"); ?>
+							<img src="<?= $image1['url']; ?>" class="tile-image-1 people-gif active"/>
+							<?php $image2 = get_field("people_image_2"); ?>
+							<img src="<?= $image2['url']; ?>" class="tile-image-2 people-gif"/>
+							<?php $image3 = get_field("people_image_3"); ?>
+							<img src="<?= $image3['url']; ?>" class="tile-image-3 people-gif"/>
 
 							<div class="tile__people__popup">
 								<div class="popup__body">
@@ -47,7 +50,7 @@ get_header(); ?>
 									<div class="popup__text"><?php the_field('people_pop_up_text'); ?></div>
 								</div>
 								<div class="popup__close">X</div>
-								<img src="<?= get_field('people_image_1')['url']; ?>" alt="<?= get_field('people_image_1')['alt']; ?>"/>
+								<img src="<?= $image1['url']; ?>" alt="<?= $image1['alt']; ?>"/>
 							</div>
 							<div class="tile__overlay"></div>
 							<div class="tile__type"><?php the_field('tile_type'); ?></div>
@@ -56,14 +59,16 @@ get_header(); ?>
 								<div class="tile__more__plus">+</div>
 								<div class="tile__more__text">More</div>
 							</div>
-							<img src="<?php the_field('rollover_image'); ?>" class="people-rollover"/>
+							<?php $image4 = get_field("rollover_image"); ?>
+							<img src="<?= $image4; ?>" class="people-rollover"/>
 						</div>
 					<?php 
 					} else if (get_field('tile_type') == 'Talk'){
 					$postAnchor = "#post-" . get_field('tile_link_2');
 					?>
 						<a href="<?php echo("blog/" . $postAnchor)?>" class="tile home-tile tile-type--<?php the_field('tile_type'); ?> tile-color--<?php the_field('text_colour'); ?>">						
-							<img src="<?php the_field('tile_image'); ?>" class="tile-image"/>
+							<?php $imageTile = get_field('tile_image'); ?>
+							<img src="<?= $imageTile; ?>" class="tile-image"/>
 							<div class="tile__overlay"></div>
 							<div class="tile__type"><?php the_field('tile_type'); ?></div>
 							<div class="tile__text"><?php the_field('tile_text'); ?></div>
@@ -75,30 +80,34 @@ get_header(); ?>
 					<?php
 					} else if (get_field('tile_type') == 'Work'){
 					?>
-						<a href="<?php the_field('link_title')?>" class="tile home-tile tile-type--<?php the_field('tile_type'); ?> tile-color--<?php the_field('text_colour'); ?>">						
-							<img src="<?php the_field('tile_image'); ?>" class="tile-image"/>
+						<a href="<?php the_field('tile_link')?>" class="tile home-tile tile-type--<?php the_field('tile_type'); ?> tile-color--<?php the_field('text_colour'); ?>">						
+							<?php $imageTile = get_field('tile_image'); ?>
+							<img src="<?= $imageTile ?>" class="tile-image"/>
 							<div class="tile__overlay"></div>
 							<div class="tile__type"><?php the_field('tile_type'); ?></div>
 							<div class="tile__text"><?php the_field('tile_text'); ?></div>
 							<div class="tile__more">
 								<div class="tile__more__plus">+</div>
 								<div class="tile__more__text">More</div>
-							</div>					
-							<img src="<?php the_field('rollover_image'); ?>" class="people-rollover"/>
+							</div>	
+							<?php $imageRoll = get_field('rollover_image'); ?>				
+							<img src="<?= $imageRoll; ?>" class="people-rollover"/>
 						</a>						
 					<?php
 					} else if (get_field('tile_type') == 'About'){
 					?>
-						<a href="<?php the_field('link_title')?>" class="tile home-tile tile-type--<?php the_field('tile_type'); ?> tile-color--<?php the_field('text_colour'); ?>">						
-							<img src="<?php the_field('tile_image'); ?>" class="tile-image"/>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>#About" class="tile home-tile tile-type--<?php the_field('tile_type'); ?> tile-color--<?php the_field('text_colour'); ?>">						
+							<?php $imageTile = get_field('tile_image'); ?>
+							<img src="<?= $imageTile; ?>" class="tile-image"/>
 							<div class="tile__overlay"></div>
 							<div class="tile__type"><?php the_field('tile_type'); ?></div>
 							<div class="tile__text"><?php the_field('tile_text'); ?></div>
 							<div class="tile__more">
 								<div class="tile__more__plus">+</div>
 								<div class="tile__more__text">More</div>
-							</div>					
-							<img src="<?php the_field('rollover_image'); ?>" class="people-rollover"/>
+							</div>
+							<?php $imageRoll = get_field('rollover_image'); ?>					
+							<img src="<?= $imageRoll; ?>" class="people-rollover"/>
 						</a>					
 					<?php
 					}

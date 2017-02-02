@@ -1,7 +1,7 @@
 .nav-toggle {
     float: left;
-    padding-top: 3rem;
-    padding-left: 2.7rem;
+    padding-top: 2.85rem;
+    padding-left: 2.8rem;
     font-size: 2.5em;
     text-align: left;
     color: #fff;
@@ -32,6 +32,20 @@
 
     .nav-toggle__btn:hover {
         color: #ffdd00;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav-container {
+        height: 100%;
+
+        .menu-menu-1-container {
+            height: 100%;
+        }
+
+        .nav-toggle__btn {
+            top: 28px;
+        }
     }
 }
 
@@ -69,6 +83,15 @@
 
     li a:hover {
         color: #ffdd00;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu {
+        height: calc(100% - 117px);
+        li {
+            font-size: 70px;
+        }
     }
 }
 

@@ -3,6 +3,7 @@
     width: 33.333%;
     float: left;
     position: relative;
+    cursor: pointer;
 
     img {
         width: 100%;
@@ -23,6 +24,7 @@
         position: absolute;
         top: 2.8em;
         left: 1em;
+        right: 1em;
         display: none;
 
         font-family: $font-bold;
@@ -144,6 +146,7 @@
     .tile__more__plus,
     .tile__more__text {
         display: block;
+        color: #333;
     }
 
 }
@@ -278,14 +281,14 @@ img.people-rollover {
     .tile__people__popup.active { 
         top: 5%;
         left: 5%;
-        width: 90%;
+        width: 85%;
 
         .popup__body {
             width: 100%;
         }
 
         img {
-            width: 100%;
+            width: 50%;
         }     
     }
 }

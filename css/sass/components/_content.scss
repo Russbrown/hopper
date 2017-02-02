@@ -2,6 +2,12 @@
     padding: 0 6em;
 }
 
+@media screen and (max-width: 500px) {
+    .content-page {
+        padding: 0 2em;
+    }
+}
+
 .page__title {
     font-size: 4.25em;
     padding-bottom: 10px;

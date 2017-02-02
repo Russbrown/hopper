@@ -47,6 +47,16 @@
     margin: 0 auto;
 }
 
+@media screen and (max-width: 500px) {
+    .case-study__title {
+        padding: 0 2em 0;
+    }
+
+    .case-study__text {
+        padding: 0 2rem 8rem;
+    }
+}
+
 .case-study__tiles {
     width: 100%;
 
@@ -54,5 +64,15 @@
         width: 50%;
         float: left;
         display: block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .case-study__tiles {
+        img {
+            width: 100%;
+            float: left;
+            display: block;
+        }
     }
 }

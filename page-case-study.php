@@ -19,7 +19,7 @@ get_header(); ?>
 					<h1 class="case-study__hero-title hero-<?= $field['colour_picker'] ?>"><?= $field['title']?></h1>
 				</div>
 
-				<h1 class="section__title"><span><?= $field['article_title']; ?></span></h1>
+				<h1 class="section__title case-study__title"><span><?= $field['article_title']; ?></span></h1>
 
 				<div class="case-study__text"><?= $field['article']; ?></div>
 
