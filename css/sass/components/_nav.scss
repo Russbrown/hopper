@@ -18,6 +18,8 @@
 .nav-container {
     display: none;
     position: relative;
+    z-index: 3;
+    width: 100%;
 
     .nav-toggle__btn {
         position: absolute;
@@ -37,32 +39,11 @@
 
 @media screen and (max-width: 500px) {
     .nav-container {
-        height: 100%;
-
-        .menu-menu-1-container {
-            height: 100%;
-        }
 
         .nav-toggle__btn {
             top: 28px;
         }
     }
-}
-
-.modal-open {
-    overflow: hidden;
-}
-
-.nav-container--active {
-    position: fixed;
-    top: 117px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    display: block;
-    overflow-y: scroll;
-    z-index: 2;
 }
 
 .menu {
@@ -88,7 +69,6 @@
 
 @media screen and (max-width: 500px) {
     .menu {
-        height: calc(100% - 117px);
         li {
             font-size: 70px;
         }
@@ -98,29 +78,4 @@
 .site-header {
     transition: all, 1s;
     -webkit-transition: all, 1s;
-}
-
-.nav__sticky-wrapper {
-    background: #efefef;
-}
-
-.site-header--fixed {
-    position: fixed;
-    top: -150px;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-    transition: all, 1s;
-    -webkit-transition: all, 1s;
-}
-
-.site-header--active {
-    position: fixed;
-    top: 0px;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-    transition: all, 1s;
-    -webkit-transition: all, 1s;
-    height: 117px;
 }
