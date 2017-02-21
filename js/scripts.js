@@ -37,4 +37,13 @@ $( document ).ready(function() {
         }, 1000);
         return false;
     });
+
+    $('.tile-type--About').on("click", function(){
+         // slide to target
+        var target = '#About';
+        $(document.body).animate({
+            'scrollTop':   $(target).offset().top
+        }, 1000);
+        return false;       
+    });
 });
